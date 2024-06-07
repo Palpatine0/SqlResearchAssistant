@@ -16,6 +16,9 @@ from langchain_core.runnables import (
     RunnableParallel,
     RunnablePassthrough,
 )
+from langchain.utilities import DuckDuckGoSearchAPIWrapper
+from search.sql import sql_answer_chain
+
 
 RESULTS_PER_QUESTION = 3
 
@@ -173,8 +176,10 @@ get_search_queries = (
 
 
 chain = (
-    get_search_queries
-    | (lambda x: [{"question": q} for q in x])
-    | multi_search.map()
-    | (lambda x: "\n\n".join(x))
+    # Generate a bunch of small queries
+        get_search_queries
+        | (lambda x: [{"question": q} for q in x])
+        # Search on each of those sub questions, answer them, join the response. Eventually pass it to final report
+        | sql_answer_chain.map()
+        | (lambda x: "\n\n".join(x))
 )

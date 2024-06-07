@@ -8,6 +8,11 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.pydantic_v1 import BaseModel
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 
+from dotenv import load_dotenv
+from langchain.callbacks.tracers.langchain import wait_for_all_tracers
+
+load_dotenv()
+wait_for_all_tracers()
 
 openAI_llm = "gpt-3.5-turbo"
 llm = ChatOpenAI(model=openAI_llm)
