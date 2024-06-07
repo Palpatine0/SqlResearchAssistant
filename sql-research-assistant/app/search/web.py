@@ -17,7 +17,7 @@ from langchain_core.runnables import (
     RunnablePassthrough,
 )
 from langchain.utilities import DuckDuckGoSearchAPIWrapper
-from search.sql import sql_answer_chain
+from app.search.sql import sql_answer_chain
 
 
 RESULTS_PER_QUESTION = 3

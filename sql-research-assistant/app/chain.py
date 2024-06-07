@@ -1,8 +1,8 @@
 from langchain_core.pydantic_v1 import BaseModel
 from langchain_core.runnables import RunnablePassthrough
 
-from search.web import chain as search_chain
-from writer import chain as writer_chain
+from app.search.web import chain as search_chain
+from app.writer import chain as writer_chain
 
 from dotenv import load_dotenv
 from langchain.callbacks.tracers.langchain import wait_for_all_tracers
