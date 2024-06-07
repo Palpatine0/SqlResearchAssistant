@@ -356,7 +356,23 @@ Go to your [LangSmith dashboard](https://smith.langchain.com/) and check the run
    - Integrate the chain with FastAPI.
    - Add a route to serve the chain.
 
-#### 2. Serving the Application by LangServe
+#### 2. Update `chian.py` and `web.py`:
+   - Alter the import route to serve the chain.
+
+**chain.py:**
+```python
+from app.search.web import chain as search_chain
+from app.writer import chain as writer_chain
+```
+
+**web.py:**
+```python
+from app.search.sql import sql_answer_chain
+```
+
+<img src="https://i.imghippo.com/files/9W8uc1717759364.jpg" alt="" border="0">
+
+#### 3. Serving the Application by LangServe
    - Run the following commands to set up and serve the application using LangServe.
 
    ```bash
