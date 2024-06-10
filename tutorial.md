@@ -289,6 +289,10 @@ The `web.py` file has been updated to include the `sql_answer_chain` in the main
   )
   ```
   
+##### 3. RunnablePassthrough
+- **Definition**: `RunnablePassthrough is a component in the LangChain framework that allows data to pass through unchanged or be modified as needed within a chain of operations.
+- **Usage**:  In this project, `RunnablePassthrough` is used to pass data between different stages of the chain and to assign the output of one stage as the input to the next.
+
 ### Step 4: Enhancing Environment Management and Tracing
 
 In this step, we will enhance the environment management and tracing capabilities of the SQL Research Assistant project.
