@@ -1,5 +1,5 @@
 
-## SQL Research Assistant Lab Guide
+## SQL Research Assistant
 
 ### Project Introduction
 The SQL Research Assistant project is an advanced tool designed to perform research by executing SQL queries on databases. It integrates LangChain's research assistant template with SQL query capabilities, leveraging local models like Llama and GPT to generate and refine queries. This project demonstrates the integration of AI with structured data, providing comprehensive research reports and deploying the application using Lang Serve for user-friendly interaction.
@@ -33,10 +33,7 @@ First, let's set up the environment and install necessary dependencies.
 
 2. **Install required packages:**
    ```bash
-   pip install langchain openai streamlit python-dotenv
-   ```
-   ```bash
-   pip install langchain_community
+   pip install langchain langchain_community openai streamlit python-dotenv
    ```
    ```bash
    pip install -U langchain-cli
@@ -49,9 +46,6 @@ First, let's set up the environment and install necessary dependencies.
    ```
 
 
-#### 3. Creating LangSmith Project
-
-Make sure u have created a LangSmith project for this lab.
 
 #### Key Concepts
 
@@ -73,10 +67,10 @@ Make sure u have created a LangSmith project for this lab.
   pip install -U duckduckgo-search
   ```
  
-### Step 2: Setup LangServe
+### Step 2: Setup LangServe and LangSmith
 
-#### LangServe Setup
-In this step, we will set up LangServe to manage our application deployment.
+#### 1. LangServe Setup
+Set up LangServe to manage our application deployment.
 
 1. **Initialize a New LangServe Application:**
    - Use the LangServe CLI to create a new application called `sql-research-assistant`.
@@ -85,6 +79,11 @@ In this step, we will set up LangServe to manage our application deployment.
    ```bash
    langchain app new sql-research-assistant
    ```
+#### 2. LangSmith Setup
+
+Make sure u have created a LangSmith project for this lab.
+
+**Project Name:** SqlResearchAssistant
 
 
 ### Step 3: feat: Integrate research assistant modules and add web scraping
