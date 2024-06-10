@@ -1,4 +1,3 @@
-
 ## SQL Research Assistant
 
 ### Project Introduction
@@ -45,10 +44,7 @@ First, let's set up the environment and install necessary dependencies.
    pip install -U duckduckgo-search
    ```
 
-
-
 #### Key Concepts
-
 
 ##### 1. BeautifulSoup
 
@@ -299,7 +295,7 @@ In this step, we will enhance the environment management and tracing capabilitie
 
 #### 1. Update the Chain Module
 
-**File**: `sql-research-assistant/sql_research_assistant/chain.py`
+**File**: `sql-research-assistant/app/chain.py`
 
 **Changes**:
 - Add the dotenv for environment variable management, and the tracer setup to ensure tracing completion.
@@ -326,7 +322,7 @@ if __name__ == "__main__":
 
 #### 2. Update the Web Module
 
-**File**: `sql-research-assistant/sql_research_assistant/search/web.py`
+**File**: `sql-research-assistant/app/search/web.py`
 
 **Changes**:
 - Added dotenv for environment variable management.
