@@ -38,31 +38,24 @@ First, let's set up the environment and install necessary dependencies.
    pip install -U langchain-cli
    ```
    ```bash
-   pip install beautifulsoup4
+   pip install -U duckduckgo-search
    ```
    ```bash
-   pip install -U duckduckgo-search
+   pip install beautifulsoup4
    ```
 
 #### Key Concepts
 
-##### 1. BeautifulSoup
+##### 1. DuckDuckGo Search API
+- **Definition**: DuckDuckGo Search API is a tool that allows developers to access DuckDuckGo search results programmatically. It provides an easy way to integrate web search functionality into applications.
+- **Usage**: It is used in this project to perform web searches and retrieve links to relevant web pages based on a user's query.
+
+##### 2. BeautifulSoup
 
 - **Definition**: BeautifulSoup is a Python library used for parsing HTML and XML documents. It creates a parse tree for parsing HTML and XML documents to extract data from HTML, which is useful for web scraping.
 - **Usage**: BeautifulSoup is typically used in conjunction with requests to fetch and parse web pages. It allows you to navigate the parse tree and search for specific elements, such as tags, attributes, and text.
-- **Installation**: You can install BeautifulSoup using the following command:
-  ```bash
-  pip install beautifulsoup4
-  ```
-  
-##### 2. DuckDuckGo Search API
-- **Definition**: DuckDuckGo Search API is a tool that allows developers to access DuckDuckGo search results programmatically. It provides an easy way to integrate web search functionality into applications.
-- **Usage**: It is used in this project to perform web searches and retrieve links to relevant web pages based on a user's query.
-- **Installation**:
-  ```bash
-  pip install -U duckduckgo-search
-  ```
- 
+
+
 ### Step 2: Setup LangServe and LangSmith
 
 #### 1. LangServe Setup
@@ -372,7 +365,8 @@ from app.search.sql import sql_answer_chain
 <img src="https://i.imghippo.com/files/9W8uc1717759364.jpg" alt="" border="0">
 
 #### 3. Serving the Application by LangServe
-   - Run the following commands to set up and serve the application using LangServe.
+
+Run the following commands to set up and serve the application using LangServe.
 
    ```bash
    cd sql-research-assistant
