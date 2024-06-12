@@ -373,7 +373,9 @@ Run the following commands to set up and serve the application using LangServe.
    langchain serve
    ```
 
-Access [Prompter Playground](http://127.0.0.1:8000/sql-research-assistant/playground/), be note that the port may vary depending on the configuration.
+You can now access the application through the following links:
+
+Access [Playground](http://127.0.0.1:8000/sql-research-assistant/playground/)
 
 <img src="https://i.imghippo.com/files/tpufz1717757599.jpg" alt="" border="0">
 <img src="https://i.imghippo.com/files/uabCN1717757920.jpg" alt="" border="0">
